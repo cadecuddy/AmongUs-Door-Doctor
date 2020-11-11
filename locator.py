@@ -54,5 +54,4 @@ def findSwitchPositions(switch_pic_path, base_img, threshold):
     else:
         return -1
     #list of 4 x,y points for mouse to click
-    #print(points)
     return points
