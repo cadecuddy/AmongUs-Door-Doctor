@@ -4,12 +4,13 @@ YOUTUBE: https://www.youtube.com/channel/UCv6Nd7YMrJRDsEo5PVN0scw
 '''
 import cv2 as cv
 import numpy as np
-from locator import findClickPositions
+from locator import findSwitchPositions
 import pyautogui
 from PIL import ImageGrab
 import keyboard
 from time import sleep
 pyautogui.PAUSE = 0.05
+tasks = ['door_switch.jpg', 'light_off.jpg']
 
 def click(list):
     for pt in list:
@@ -18,12 +19,16 @@ def click(list):
         pyautogui.click()
 
 def detect():
-    sleep(.35) #allows door panel to fully open to prevent inaccuracy
+    sleep(.35) #allows task panel to fully open to prevent inaccuracy
     screenshot = ImageGrab.grab()
     screenshot = np.array(screenshot)
     screenshot = cv.cvtColor(screenshot,cv.COLOR_RGB2BGR)
-
-    spotter = findClickPositions('door_switch.jpg', screenshot, 0.85)
+    #give spotter value of -1 by default
+    spotter = findSwitchPositions('dog.jpg',screenshot,0.85)
+    c = 0
+    while spotter == -1 and c < len(tasks):
+        spotter = findSwitchPositions(tasks[c], screenshot, 0.85)
+        c += 1
     if spotter != -1:
         click(spotter)
         pyautogui.press("esc")
