@@ -49,5 +49,5 @@ def findClickPositions(switch_pic_path, door_img, threshold):
     else:
         return -1
     #list of 4 x,y points for mouse to click
-    print(points)
+    #print(points)
     return points
