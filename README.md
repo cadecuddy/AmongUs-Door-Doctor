@@ -1,7 +1,7 @@
 # AmongUs-Task-Tool
 ### Got tired of menial Among Us tasks?
 
-## Well *look no further*...
+### Well *look no further*...
 
 
 #### My Among Us task automator alleves the stress and repetition during a round, and gives you more time to catch the killer!
