@@ -37,7 +37,6 @@ def findSwitchPositions(switch_pic_path, base_img, threshold):
         for (x, y, w, h) in rectangles:
             #calculating center points of rectangles
             if switch_pic_path == "light_off.jpg":
-                print("LIGHTS")
                 center_x = x + int(w / 2)
                 center_y = y + int(h / 2) - 30
             else:

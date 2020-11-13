@@ -23,21 +23,32 @@ def detect():
     screenshot = ImageGrab.grab()
     screenshot = np.array(screenshot)
     screenshot = cv.cvtColor(screenshot,cv.COLOR_RGB2BGR)
-    #give spotter value of -1 by default
-    spotter = findSwitchPositions('dog.jpg',screenshot,0.85)
-    c = 0
-    while spotter == -1 and c < len(tasks):
-        spotter = findSwitchPositions(tasks[c], screenshot, 0.85)
-        c += 1
+
+    # Ugly repetitive "IF" statements but run quicker than a loop
+    spotter = findSwitchPositions(tasks[0], screenshot, 0.85)
+    if spotter != -1:
+        click(spotter)
+        pyautogui.press("esc")
+    spotter = findSwitchPositions(tasks[1], screenshot, 0.85)
     if spotter != -1:
         click(spotter)
         pyautogui.press("esc")
 
+def panic():
+    pyautogui.moveTo(1788,709)
+    pyautogui.click()
+
 def runBot():
+    panic_mode = False
     while True:
         key = keyboard.read_key()
         if key == "e":
             detect()
+        if key == "p" and panic_mode == False:
+            panic_mode = True
+            panic()
+        else:
+            panic_mode = False
         if key == "`":
             exit()
 
