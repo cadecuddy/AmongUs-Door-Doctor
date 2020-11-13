@@ -10,7 +10,7 @@ from PIL import ImageGrab
 import keyboard
 from time import sleep
 pyautogui.PAUSE = 0.05
-tasks = ['door_switch.jpg', 'light_off.jpg']
+tasks = ['door_switch.jpg', 'light_off.jpg', 'blue_wire.jpg']
 
 def click(list):
     for pt in list:
@@ -26,13 +26,15 @@ def detect():
 
     # Ugly repetitive "IF" statements but run quicker than a loop
     spotter = findSwitchPositions(tasks[0], screenshot, 0.85)
-    if spotter != -1:
-        click(spotter)
-        pyautogui.press("esc")
+    if spotter != -1: click(spotter), pyautogui.press("esc")
     spotter = findSwitchPositions(tasks[1], screenshot, 0.85)
-    if spotter != -1:
-        click(spotter)
-        pyautogui.press("esc")
+    if spotter != -1: click(spotter), pyautogui.press("esc")
+    spotter = findSwitchPositions(tasks[2], screenshot, 0.85)
+    if spotter != -1: fix_wires(spotter)
+
+def fix_wires(positions):
+    # TODO: ADD WIRES CODE
+    return -1
 
 def panic():
     pyautogui.moveTo(1788,709)
