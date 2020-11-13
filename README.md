@@ -14,3 +14,7 @@
 
 ### Solve doors in record time!
 ![](example.gif)
+
+
+### Panic mode for fast body reports!
+![](panic.gif)
