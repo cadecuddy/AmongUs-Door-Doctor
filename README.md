@@ -16,5 +16,5 @@
 ![](example.gif)
 
 
-### Panic mode for fast body reports!
+### Panic mode for fast body reports! (WIP)
 ![](panic.gif)
