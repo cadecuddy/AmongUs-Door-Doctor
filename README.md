@@ -9,7 +9,6 @@
 #### Supported tasks so far:
 #### - Polus doors
 #### - Lights
-#### - Wires (in development right now!)
 
 
 ### Solve doors in record time!
