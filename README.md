@@ -1,4 +1,4 @@
-# AmongUs-Task-Tool
+# AmongUs-Door-Tool
 ### Got tired of menial doors on Polus?
 
 ### Well *look no further*...
