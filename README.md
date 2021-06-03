@@ -11,6 +11,6 @@
 #### - Lights
 
 
-### Solve doors in record time!
+### Solve randomized door combos in record time!
 ![](example.gif)
 
