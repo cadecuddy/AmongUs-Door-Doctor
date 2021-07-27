@@ -26,3 +26,5 @@
 - [OpenCV](https://github.com/opencv) - Open-source computer vision library that aided in the door switch recognition.
 - [NumPy](https://github.com/numpy/numpy) - Python computing library, helped calculate click points for door switches. 
 
+## Origin Story
+When Among Us was at its peak popularity in late 2020, my friends and I would play it quite a bit. There was one map in particular, "Polus", that had these doors that killers were able to close to trap players in. You could open them if you solved a puzzle, but *if you were too slow you'd die*. I made this program to gain an advantage when playing with my friends, needless to say I was never door-trapped again :P
