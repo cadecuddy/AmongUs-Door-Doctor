@@ -1,16 +1,28 @@
-# AmongUs-Door-Tool
-### Got tired of menial doors on Polus?
+<h1 align="center">
+  <br>
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.graphicpie.com%2Fwp-content%2Fuploads%2F2020%2F11%2Fred-among-us-png.png&f=1&nofb=1" alt="Amongus" width="200">
+  <br>
+  Among Us Door Tool
+  <br>
+</h1>
 
-### Well *look no further*...
+<h3 align="center">
+  <br>
+    Solve randomized doors in record time!
+  <br>
+  <br>
+</h3>
 
+<p align="center">
+  <img src="example.gif" alt="animated" width="750" height="450" />
+</p>
 
-#### My Among Us door solver alleves stress and repetition during a round, and gives you more time to catch the killer!
+## Features
+- Automatic Polus door solving every time door menu is opened
+- Auto lights puzzle solving
 
-#### Supported tasks so far:
-#### - Polus doors
-#### - Lights
+## Built with 
 
-
-### Solve randomized door combos in record time!
-![](example.gif)
+- [OpenCV](https://github.com/opencv) - Open-source computer vision library that aided in the door switch recognition.
+- [NumPy](https://github.com/numpy/numpy) - Python computing library, helped calculate click points for door switches. 
 
